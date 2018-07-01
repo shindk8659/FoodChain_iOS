@@ -6,8 +6,6 @@ target 'FoodChain_iOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 
     pod 'Alamofire'
-    pod 'AlamofireObjectMapper'
-    pod 'ObjectMapper'
     pod 'SwiftyJSON'
     pod 'Kingfisher'
     pod 'Toast-Swift'
