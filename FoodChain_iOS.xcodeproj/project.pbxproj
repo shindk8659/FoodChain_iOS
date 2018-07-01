@@ -12,6 +12,8 @@
 		52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDED920E8765F00AEEB1E /* Main.storyboard */; };
 		52FBDEDD20E8766000AEEB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDEDC20E8766000AEEB1E /* Assets.xcassets */; };
 		52FBDEE020E8766000AEEB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDEDE20E8766000AEEB1E /* LaunchScreen.storyboard */; };
+		52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEEC20E87AC800AEEB1E /* Extension.swift */; };
+		52FBDEF020E87D2A00AEEB1E /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */; };
 		D21483B9B49F6754787292FC /* Pods_FoodChain_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAFA82CCCF0667A6F59C2A4 /* Pods_FoodChain_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		52FBDEDC20E8766000AEEB1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FBDEDF20E8766000AEEB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52FBDEE120E8766000AEEB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FBDEEC20E87AC800AEEB1E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		6EAFA82CCCF0667A6F59C2A4 /* Pods_FoodChain_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodChain_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		846693E43FBC91C6B9C78C4C /* Pods-FoodChain_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodChain_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodChain_iOS/Pods-FoodChain_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED428845C85BA963E48CB7E7 /* Pods-FoodChain_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodChain_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodChain_iOS/Pods-FoodChain_iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,14 +73,64 @@
 		52FBDED420E8765F00AEEB1E /* FoodChain_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				52FBDED520E8765F00AEEB1E /* AppDelegate.swift */,
-				52FBDED720E8765F00AEEB1E /* ViewController.swift */,
-				52FBDED920E8765F00AEEB1E /* Main.storyboard */,
-				52FBDEDC20E8766000AEEB1E /* Assets.xcassets */,
-				52FBDEDE20E8766000AEEB1E /* LaunchScreen.storyboard */,
-				52FBDEE120E8766000AEEB1E /* Info.plist */,
+				52FBDEEB20E87A7200AEEB1E /* StoryBoard */,
+				52FBDEEA20E87A1200AEEB1E /* Extension */,
+				52FBDEE920E87A0000AEEB1E /* ViewController */,
+				52FBDEE820E879FC00AEEB1E /* Support */,
+				52FBDEE720E8797A00AEEB1E /* Module */,
 			);
 			path = FoodChain_iOS;
+			sourceTree = "<group>";
+		};
+		52FBDEE720E8797A00AEEB1E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDEEE20E87D1800AEEB1E /* Network */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		52FBDEE820E879FC00AEEB1E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDED520E8765F00AEEB1E /* AppDelegate.swift */,
+				52FBDEDC20E8766000AEEB1E /* Assets.xcassets */,
+				52FBDEE120E8766000AEEB1E /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		52FBDEE920E87A0000AEEB1E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDED720E8765F00AEEB1E /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		52FBDEEA20E87A1200AEEB1E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDEEC20E87AC800AEEB1E /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		52FBDEEB20E87A7200AEEB1E /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDED920E8765F00AEEB1E /* Main.storyboard */,
+				52FBDEDE20E8766000AEEB1E /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		52FBDEEE20E87D1800AEEB1E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		8778DFDB2C3CD7B8102485C9 /* Pods */ = {
@@ -237,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
+				52FBDEF020E87D2A00AEEB1E /* APIRouter.swift in Sources */,
 				52FBDED820E8765F00AEEB1E /* ViewController.swift in Sources */,
 				52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */,
 			);
@@ -385,8 +441,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB65UR5HX8;
-				INFOPLIST_FILE = FoodChain_iOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamFoodChain.FoodChain-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -401,8 +460,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB65UR5HX8;
-				INFOPLIST_FILE = FoodChain_iOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamFoodChain.FoodChain-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
