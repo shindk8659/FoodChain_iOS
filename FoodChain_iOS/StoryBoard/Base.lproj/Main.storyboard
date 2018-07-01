@@ -1,24 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FoodChain_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWP-p5-FP0">
+                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <color key="backgroundColor" red="0.71548476179937204" green="0.90414815989847719" blue="0.52735040657488919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VWP-p5-FP0" secondAttribute="height" multiplier="375:62" id="Re9-vi-voL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Vq-Sk-Gvk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-Uj-0Kx">
+                                <rect key="frame" x="24" y="320" width="327" height="48"/>
+                                <state key="normal" image="continue">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ContinueAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysp-p5-4pj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VWP-p5-FP0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6y2-lf-qGk"/>
+                            <constraint firstItem="VWP-p5-FP0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ICQ-NH-efX"/>
+                            <constraint firstItem="VWP-p5-FP0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dum-Kt-hR1"/>
+                            <constraint firstItem="1Rq-Uj-0Kx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iUy-fS-vAn"/>
+                            <constraint firstItem="1Rq-Uj-0Kx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lKg-Tx-Dxk"/>
+                            <constraint firstItem="VWP-p5-FP0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pxP-re-Dvf"/>
+                            <constraint firstItem="VWP-p5-FP0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zrp-iA-RAx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="continueLB" destination="1Rq-Uj-0Kx" id="Km8-fl-ZXX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+        <!--관심상품-->
+        <scene sceneID="eqR-YQ-O8c">
+            <objects>
+                <viewController id="EKR-C2-f82" customClass="FavoriteViewController" customModule="FoodChain_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lQ3-Je-At7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Et3-zw-5LH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PkM-EM-ZiE">
+                                    <size key="itemSize" width="160" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favoritecell" id="kVS-zG-UiJ" customClass="FavoriteCollectionViewCell" customModule="FoodChain_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGB-ir-mtv">
+                                                    <rect key="frame" x="59" y="69.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.71548476179937204" green="0.90414815989847719" blue="0.52735040657488919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="jGB-ir-mtv" firstAttribute="centerX" secondItem="kVS-zG-UiJ" secondAttribute="centerX" id="Dfs-nF-lfp"/>
+                                            <constraint firstItem="jGB-ir-mtv" firstAttribute="centerY" secondItem="kVS-zG-UiJ" secondAttribute="centerY" id="wcF-M4-5pF"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="FavoriteLB" destination="jGB-ir-mtv" id="tMh-Xp-TML"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Et3-zw-5LH" firstAttribute="top" secondItem="f89-yB-PKs" secondAttribute="top" id="Lbw-XG-Vp0"/>
+                            <constraint firstItem="f89-yB-PKs" firstAttribute="trailing" secondItem="Et3-zw-5LH" secondAttribute="trailing" id="SHt-V0-5Eo"/>
+                            <constraint firstItem="Et3-zw-5LH" firstAttribute="leading" secondItem="f89-yB-PKs" secondAttribute="leading" id="fNn-oH-mXJ"/>
+                            <constraint firstItem="Et3-zw-5LH" firstAttribute="centerX" secondItem="f89-yB-PKs" secondAttribute="centerX" id="jI6-rw-bqA"/>
+                            <constraint firstItem="Et3-zw-5LH" firstAttribute="centerY" secondItem="f89-yB-PKs" secondAttribute="centerY" id="jJ1-wf-rwn"/>
+                            <constraint firstItem="f89-yB-PKs" firstAttribute="bottom" secondItem="Et3-zw-5LH" secondAttribute="bottom" id="uf5-zf-gw4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f89-yB-PKs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="관심상품" id="XKO-wb-llE"/>
+                    <connections>
+                        <outlet property="FavoriteCollectionView" destination="Et3-zw-5LH" id="gJU-vw-Vfn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzT-yp-oFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2174" y="-696"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="bpl-YC-sbX">
+            <objects>
+                <tabBarController storyboardIdentifier="tabbarview" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Ig-cP-y7v" customClass="TabBarViewController" customModule="FoodChain_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hnF-4m-xfk"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GPo-Yt-A5Z">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e8N-fs-4xB" kind="relationship" relationship="viewControllers" id="tFq-yW-Ozm"/>
+                        <segue destination="vgS-3n-iDh" kind="relationship" relationship="viewControllers" id="qpY-f4-Dvw"/>
+                        <segue destination="i5Y-BB-xXM" kind="relationship" relationship="viewControllers" id="rSX-TO-gOK"/>
+                        <segue destination="hKK-SY-4Iw" kind="relationship" relationship="viewControllers" id="d5v-x1-LYx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43b-oq-92A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="34"/>
+        </scene>
+        <!--StoreHome-->
+        <scene sceneID="yEE-gr-xq5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StoreHome" id="e8N-fs-4xB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="e2h-lD-mBt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glM-zu-bqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="-254"/>
+        </scene>
+        <!--MyRefrigerator-->
+        <scene sceneID="vcd-qx-Aor">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyRefrigerator" id="vgS-3n-iDh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Gds-1e-qZa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsR-Ta-9Zi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973" y="-165"/>
+        </scene>
+        <!--Alert-->
+        <scene sceneID="d3K-QH-L3Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Alert" id="i5Y-BB-xXM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xfa-YX-lnF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5z-kc-03t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="-20"/>
+        </scene>
+        <!--Mypage-->
+        <scene sceneID="ZWP-3y-VTl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mypage" id="hKK-SY-4Iw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wx4-W9-hPk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHs-y9-LeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="103"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hcQ-Uq-0eC">
+            <objects>
+                <navigationController storyboardIdentifier="favoriteview" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LPU-Wh-WdO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JbZ-Ad-YlO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EKR-C2-f82" kind="relationship" relationship="rootViewController" id="Z0s-zo-uCM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oif-1G-6SJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="-696"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="continue" width="327" height="48"/>
+    </resources>
 </document>
