@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520FA11820EA2DB60087C2B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 520FA11720EA2DB60087C2B8 /* Info.plist */; };
 		522B10CC20E9D1F70002386D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
 		52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED720E8765F00AEEB1E /* LoginViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520FA11720EA2DB60087C2B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		522B10CE20E9D3FC0002386D /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		52FBDED220E8765F00AEEB1E /* FoodChain_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodChain_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +37,6 @@
 		52FBDEDA20E8765F00AEEB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52FBDEDC20E8766000AEEB1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52FBDEDF20E8766000AEEB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		52FBDEE120E8766000AEEB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FBDEEC20E87AC800AEEB1E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -115,9 +116,9 @@
 		52FBDEE820E879FC00AEEB1E /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				520FA11720EA2DB60087C2B8 /* Info.plist */,
 				52FBDED520E8765F00AEEB1E /* AppDelegate.swift */,
 				52FBDEDC20E8766000AEEB1E /* Assets.xcassets */,
-				52FBDEE120E8766000AEEB1E /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -274,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520FA11820EA2DB60087C2B8 /* Info.plist in Resources */,
 				52FBDEE020E8766000AEEB1E /* LaunchScreen.storyboard in Resources */,
 				52FBDF0020E892D600AEEB1E /* Mypage.storyboard in Resources */,
 				52FBDEFC20E892BD00AEEB1E /* MyRefrigerator.storyboard in Resources */,
@@ -527,10 +529,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -613,10 +612,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

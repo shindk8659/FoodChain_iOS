@@ -13,4 +13,6 @@ target 'FoodChain_iOS' do
     pod 'RealmSwift'
     pod 'GoogleMaps'
     pod 'GooglePlaces'
+    pod 'AlamofireObjectMapper'
+    pod	'ObjectMapper'
 end
