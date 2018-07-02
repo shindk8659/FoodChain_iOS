@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,45 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWP-p5-FP0">
-                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
-                                <color key="backgroundColor" red="0.71548476179937204" green="0.90414815989847719" blue="0.52735040657488919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VWP-p5-FP0" secondAttribute="height" multiplier="375:62" id="Re9-vi-voL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3W-sT-mzk">
+                                <rect key="frame" x="164" y="547" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Vq-Sk-Gvk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-Uj-0Kx">
-                                <rect key="frame" x="24" y="320" width="327" height="48"/>
-                                <state key="normal" image="continue">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="ContinueAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysp-p5-4pj"/>
+                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="up2-0s-tZW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="VWP-p5-FP0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6y2-lf-qGk"/>
-                            <constraint firstItem="VWP-p5-FP0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ICQ-NH-efX"/>
-                            <constraint firstItem="VWP-p5-FP0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dum-Kt-hR1"/>
-                            <constraint firstItem="1Rq-Uj-0Kx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iUy-fS-vAn"/>
-                            <constraint firstItem="1Rq-Uj-0Kx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lKg-Tx-Dxk"/>
-                            <constraint firstItem="VWP-p5-FP0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pxP-re-Dvf"/>
-                            <constraint firstItem="VWP-p5-FP0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zrp-iA-RAx"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="continueLB" destination="1Rq-Uj-0Kx" id="Km8-fl-ZXX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,6 +108,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hnF-4m-xfk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GPo-Yt-A5Z">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -209,7 +182,4 @@
             <point key="canvasLocation" x="1214" y="-696"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="continue" width="327" height="48"/>
-    </resources>
 </document>

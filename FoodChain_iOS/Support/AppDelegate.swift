@@ -12,8 +12,31 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    @available(iOS 10.0, *)
 
-
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        
+        if KOSession.isKakaoAccountLoginCallback(url) {
+            return KOSession.handleOpen(url)
+        }
+        else{
+            
+            return true
+            
+        }
+        
+    }
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        if KOSession.isKakaoAccountLoginCallback(url) {
+            return KOSession.handleOpen(url)
+        }
+        else{
+            return true
+            
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
