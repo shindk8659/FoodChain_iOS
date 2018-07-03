@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		520FA11820EA2DB60087C2B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 520FA11720EA2DB60087C2B8 /* Info.plist */; };
+		522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522A24F420EA646200D1C272 /* KakaoJoinModule.swift */; };
 		522B10CC20E9D1F70002386D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */; };
+		525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FCB8020EBAE9D0076C378 /* TermViewController.swift */; };
+		52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8320EB39D60028A33E /* JoinViewController.swift */; };
+		52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
 		52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED720E8765F00AEEB1E /* LoginViewController.swift */; };
 		52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDED920E8765F00AEEB1E /* Main.storyboard */; };
@@ -29,8 +33,12 @@
 
 /* Begin PBXFileReference section */
 		520FA11720EA2DB60087C2B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522A24F420EA646200D1C272 /* KakaoJoinModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinModule.swift; sourceTree = "<group>"; };
 		522B10CB20E9D1F70002386D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		522B10CE20E9D3FC0002386D /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		525FCB8020EBAE9D0076C378 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
+		52634A8320EB39D60028A33E /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinViewController.swift; sourceTree = "<group>"; };
 		52FBDED220E8765F00AEEB1E /* FoodChain_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodChain_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FBDED520E8765F00AEEB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FBDED720E8765F00AEEB1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +82,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		525DBD0020EB389600935E46 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				52634A8820EB50750028A33E /* SelectFavorite */,
+				52FBDED720E8765F00AEEB1E /* LoginViewController.swift */,
+				52634A8320EB39D60028A33E /* JoinViewController.swift */,
+				52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */,
+				525FCB8020EBAE9D0076C378 /* TermViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		52634A8820EB50750028A33E /* SelectFavorite */ = {
+			isa = PBXGroup;
+			children = (
+				52FBDF0620E895C600AEEB1E /* FavoriteViewController.swift */,
+				52FBDF0820E8966F00AEEB1E /* FavoriteCollectionViewCell.swift */,
+			);
+			path = SelectFavorite;
+			sourceTree = "<group>";
+		};
 		52FBDEC920E8765F00AEEB1E = {
 			isa = PBXGroup;
 			children = (
@@ -98,9 +127,9 @@
 				52FBDEEB20E87A7200AEEB1E /* StoryBoard */,
 				52FBDEEA20E87A1200AEEB1E /* Extension */,
 				52FBDEE920E87A0000AEEB1E /* ViewController */,
-				52FBDEE820E879FC00AEEB1E /* Support */,
 				52FBDEE720E8797A00AEEB1E /* Module */,
 				522B10CE20E9D3FC0002386D /* KakaoOpenSDK-Bridging-Header.h */,
+				52FBDEE820E879FC00AEEB1E /* Support */,
 			);
 			path = FoodChain_iOS;
 			sourceTree = "<group>";
@@ -160,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				52FBDEEF20E87D2A00AEEB1E /* APIRouter.swift */,
+				522A24F420EA646200D1C272 /* KakaoJoinModule.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -167,10 +197,8 @@
 		52FBDF0120E8953200AEEB1E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				52FBDED720E8765F00AEEB1E /* LoginViewController.swift */,
+				525DBD0020EB389600935E46 /* Account */,
 				52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */,
-				52FBDF0620E895C600AEEB1E /* FavoriteViewController.swift */,
-				52FBDF0820E8966F00AEEB1E /* FavoriteCollectionViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -368,13 +396,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */,
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
 				52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */,
 				52FBDEF020E87D2A00AEEB1E /* APIRouter.swift in Sources */,
 				52FBDF0720E895C600AEEB1E /* FavoriteViewController.swift in Sources */,
 				52FBDF0920E8966F00AEEB1E /* FavoriteCollectionViewCell.swift in Sources */,
+				525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */,
 				52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */,
 				52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */,
+				522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */,
+				52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */,
 				52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +561,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -612,7 +647,10 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FoodChain_iOS/Support/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

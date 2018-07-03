@@ -10,6 +10,37 @@ import Foundation
 import UIKit
 import Kingfisher
 
+extension UITextField {
+    func setBottomBorder() {
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor.white.cgColor
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
+}
+extension KakaoJoinModule{
+    //옵셔널 String을 해제하는데 값이 nil이면 ""을 반환
+    func gsno(_ data: String?) -> String {
+        guard let str = data else {
+            return ""
+        }
+        return str
+    }
+    
+    //옵셔널 Int를 해제하는데 값이 nil이면 0을 반환
+    func gino(_ data: Int?) -> Int {
+        guard let num = data else {
+            return 0
+        }
+        return num
+    }
+
+    
+}
 extension UITableView {
     
     func scrollToBottom() {
