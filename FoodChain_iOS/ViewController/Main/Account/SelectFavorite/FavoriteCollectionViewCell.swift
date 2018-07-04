@@ -20,7 +20,7 @@ class FavoriteCollectionViewCell: UICollectionViewCell {
                 self.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     
             } else { // Normal cell
-                self.backgroundColor = #colorLiteral(red: 0.6629508138, green: 0.9110341072, blue: 0.4754059315, alpha: 1)
+                self.backgroundColor = #colorLiteral(red: 0.2158766389, green: 0.6043385863, blue: 0.4158287644, alpha: 1)
               
                 
             }

@@ -25,7 +25,9 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+        
         SendFavoriteBtn.isEnabled = false
    
         FavoriteCollectionView.dataSource = self 
@@ -71,12 +73,15 @@ extension FavoriteViewController: UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+       
         selectcount += 1
         if selectcount >= 3{
+            
             SendFavoriteBtn.isEnabled = true
         }
     }
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
         
         selectcount -= 1
        if selectcount < 3{
