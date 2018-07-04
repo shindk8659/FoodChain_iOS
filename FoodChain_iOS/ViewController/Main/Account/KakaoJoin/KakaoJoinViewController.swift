@@ -1,5 +1,5 @@
 //
-//  JoinViewController.swift
+//  KakaoJoinViewController.swift
 //  FoodChain_iOS
 //
 //  Created by 신동규 on 2018. 7. 3..
@@ -8,62 +8,62 @@
 
 import UIKit
 
-class JoinViewController: UIViewController {
-
-    @IBOutlet weak var JoinBtn: UIButton!
-    @IBOutlet weak var nameTF: UITextField!
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var passTF: UITextField!
-    @IBOutlet weak var passcomTF: UITextField!
-    @IBOutlet weak var numberTF: UITextField!
-    @IBOutlet weak var confrimBtn: UIButton!
+class KakaoJoinViewController: UIViewController {
     
-    var cheak = 0
+    var kakaoUserId :String = ""
+    var KakaoNickname:String = ""
+    var check : Int = 0
+    
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var numberTF: UITextField!
+    @IBOutlet weak var emailCheck: UIImageView!
+    @IBOutlet weak var termCheck: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        nameTF.setBottomBorder()
-        emailTF.setBottomBorder()
-        passcomTF.setBottomBorder()
-        passTF.setBottomBorder()
-        numberTF.setBottomBorder()
-    
-
-        self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: self, action: #selector(JoinViewController.back(sender:)))
         
-       newBackButton.setBackgroundImage(#imageLiteral(resourceName: "Back"), for: .normal, barMetrics: .default)
+        emailTF.setBottomBorder()
+        numberTF.setBottomBorder()
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: self, action: #selector(KakaoJoinViewController.back(sender:)))
+        
+        newBackButton.setBackgroundImage(#imageLiteral(resourceName: "Back"), for: .normal, barMetrics: .default)
         self.navigationItem.leftBarButtonItem = newBackButton
-    
+       
+       
         
     }
     
+    
     @objc func back(sender: UIBarButtonItem) {
-        
         
         navigationController?.popViewController(animated: true)
     }
     
-    
-    @IBAction func confirmtermBtn(_ sender: UIButton) {
+    @IBAction func confirmTermAction(_ sender: UIButton) {
         
-        if cheak == 0{
+        if check == 0{
             sender.setImage(#imageLiteral(resourceName: "Yes-Color"), for: .normal)
-            cheak = 1
+            check = 1
+            
         }
-        else {
+        else if check == 1{
             sender.setImage(#imageLiteral(resourceName: "Yes"), for: .normal)
-            cheak = 0
+            check = 0
+            
         }
+        
+        
         
     }
     
-    @IBAction func JoinAction(_ sender: Any) {
+    @IBAction func kakaoJoinAction(_ sender: Any) {
         
         let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "favoriteview")
         
         present(mainview, animated: true, completion: nil)
+        
     }
     
     

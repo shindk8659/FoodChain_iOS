@@ -29,11 +29,11 @@ class KakaoJoinModule {
                     if kakao != nil{
                         
                         print(kakao!)
-                        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kakaojoin") as! KakaoJoinViewController
+                        let mainview = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "kakaoselectusertype") as! KakaoSelectUsertypeViewController
                         mainview.kakaoUserId = self.gsno(kakao?.id)
                         mainview.KakaoNickname = self.gsno(kakao?.nickname)
                         
-                        view.present(mainview, animated: true, completion: nil)
+                        view.navigationController?.pushViewController(mainview, animated: true)
                         
                     }
                     else{

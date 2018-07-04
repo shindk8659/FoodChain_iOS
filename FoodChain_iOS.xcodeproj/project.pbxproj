@@ -13,6 +13,10 @@
 		525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FCB8020EBAE9D0076C378 /* TermViewController.swift */; };
 		52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8320EB39D60028A33E /* JoinViewController.swift */; };
 		52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */; };
+		528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E324020EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift */; };
+		528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */; };
+		52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */; };
+		52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */; };
 		52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED520E8765F00AEEB1E /* AppDelegate.swift */; };
 		52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FBDED720E8765F00AEEB1E /* LoginViewController.swift */; };
 		52FBDEDB20E8765F00AEEB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FBDED920E8765F00AEEB1E /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 		525FCB8020EBAE9D0076C378 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
 		52634A8320EB39D60028A33E /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoJoinViewController.swift; sourceTree = "<group>"; };
+		528E324020EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSelectUsertypeViewController.swift; sourceTree = "<group>"; };
+		528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOwnerJoinViewController.swift; sourceTree = "<group>"; };
+		52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerJoinViewController.swift; sourceTree = "<group>"; };
+		52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUsertypeViewController.swift; sourceTree = "<group>"; };
 		52FBDED220E8765F00AEEB1E /* FoodChain_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodChain_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FBDED520E8765F00AEEB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FBDED720E8765F00AEEB1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -85,11 +93,12 @@
 		525DBD0020EB389600935E46 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				52634A8820EB50750028A33E /* SelectFavorite */,
 				52FBDED720E8765F00AEEB1E /* LoginViewController.swift */,
-				52634A8320EB39D60028A33E /* JoinViewController.swift */,
-				52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */,
 				525FCB8020EBAE9D0076C378 /* TermViewController.swift */,
+				52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */,
+				528E324520EC82FD0082D52C /* NativeJoin */,
+				528E324420EC82D10082D52C /* KakaoJoin */,
+				52634A8820EB50750028A33E /* SelectFavorite */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -101,6 +110,26 @@
 				52FBDF0820E8966F00AEEB1E /* FavoriteCollectionViewCell.swift */,
 			);
 			path = SelectFavorite;
+			sourceTree = "<group>";
+		};
+		528E324420EC82D10082D52C /* KakaoJoin */ = {
+			isa = PBXGroup;
+			children = (
+				528E324020EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift */,
+				52634A8620EB4C090028A33E /* KakaoJoinViewController.swift */,
+				528E324220EC7E090082D52C /* KakaoOwnerJoinViewController.swift */,
+			);
+			path = KakaoJoin;
+			sourceTree = "<group>";
+		};
+		528E324520EC82FD0082D52C /* NativeJoin */ = {
+			isa = PBXGroup;
+			children = (
+				52996EE220EC266500F33A6D /* SelectUsertypeViewController.swift */,
+				52634A8320EB39D60028A33E /* JoinViewController.swift */,
+				52996EE020EC1CAC00F33A6D /* OwnerJoinViewController.swift */,
+			);
+			path = NativeJoin;
 			sourceTree = "<group>";
 		};
 		52FBDEC920E8765F00AEEB1E = {
@@ -198,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				525DBD0020EB389600935E46 /* Account */,
-				52FBDEF320E8897800AEEB1E /* TabBarViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -398,15 +426,19 @@
 			files = (
 				52634A8720EB4C090028A33E /* KakaoJoinViewController.swift in Sources */,
 				52FBDEED20E87AC800AEEB1E /* Extension.swift in Sources */,
+				528E324120EC7CDB0082D52C /* KakaoSelectUsertypeViewController.swift in Sources */,
 				52FBDEF620E88B3C00AEEB1E /* StoreHomeViewController.swift in Sources */,
 				52FBDEF020E87D2A00AEEB1E /* APIRouter.swift in Sources */,
 				52FBDF0720E895C600AEEB1E /* FavoriteViewController.swift in Sources */,
+				528E324320EC7E090082D52C /* KakaoOwnerJoinViewController.swift in Sources */,
 				52FBDF0920E8966F00AEEB1E /* FavoriteCollectionViewCell.swift in Sources */,
 				525FCB8120EBAE9D0076C378 /* TermViewController.swift in Sources */,
 				52FBDED820E8765F00AEEB1E /* LoginViewController.swift in Sources */,
 				52FBDEF420E8897800AEEB1E /* TabBarViewController.swift in Sources */,
+				52996EE320EC266500F33A6D /* SelectUsertypeViewController.swift in Sources */,
 				522A24F520EA646200D1C272 /* KakaoJoinModule.swift in Sources */,
 				52634A8420EB39D60028A33E /* JoinViewController.swift in Sources */,
+				52996EE120EC1CAC00F33A6D /* OwnerJoinViewController.swift in Sources */,
 				52FBDED620E8765F00AEEB1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
