@@ -16,7 +16,7 @@ ___
 
 * 워크플로우
 
-![workflow](/eatda_iOS/images/workflow.png)
+![workflow](/images/workflow.png)
 
 ___
 
