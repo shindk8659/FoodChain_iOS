@@ -16,7 +16,7 @@ ___
 
 * 워크플로우
 
-![workflow](/Users/shindongkyu/Desktop/신동규파일/잇다v1/eatda_iOS/images/workflow.png)
+![workflow](/eatda_iOS/images/workflow.png)
 
 ___
 
